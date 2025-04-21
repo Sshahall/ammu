@@ -1,9 +1,40 @@
-body {
+/* Add this at the top of your CSS or in the <head> if it's inline */
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #fff0f5;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+  }
+  
+  /* Make sure container fits screen width */
+  .container {
+    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
   }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 16px;
+    }
+  
+    /* Adjust any large fixed widths */
+    img, video, iframe {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* If you're using flex or grid layouts */
+    .row, .flex {
+      flex-wrap: wrap;
+    }
+  }
+  
 
   section {
     padding: 80px 20px;
