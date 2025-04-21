@@ -1,4 +1,10 @@
-/* Add this at the top of your CSS or in the <head> if it's inline */
+@media (max-width: 768px) {
+    /* Mobile-specific styles */
+  }
+
+
+  
+  /* Add this at the top of your CSS or in the <head> if it's inline */
 * {
     margin: 0;
     padding: 0;
