@@ -1,0 +1,560 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f5;
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(255, 105, 180, 0.4), rgba(255, 192, 203, 0.4)), url('images/ammus1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .love-buttons {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin-top: 30px;
+}
+
+.love-buttons button {
+padding: 12px 30px;
+border: none;
+border-radius: 30px;
+font-size: 18px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#yesBtn {
+background-color: #ff69b4;
+color: white;
+}
+
+#noBtn {
+background-color: #ffe6f0;
+color: #ff1493;
+}
+
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff1493;
+  }
+
+
+  .timeline {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .timeline-item {
+    background: #ffe6f0;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .swiper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .final-message {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: -100px auto;
+    color: #333;
+  }
+
+  .countdown-container {
+    background-color: #ffb6c148;
+    padding: 20px;
+    border-radius: 10px;
+
+  }
+  
+  #commitment-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  #days-countdown {
+    font-size: 1.5rem;
+    color: #ff1493;
+    font-weight: bold;
+  }
+  
+
+  @keyframes fall {
+    0% { transform: translateY(-100px) rotate(0); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  .heart {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall 5s linear infinite;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  .love-letter {
+    background: #fff5f8;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .love-letter-container {
+    background: #fff;
+    border: 2px dashed #ff69b4;
+    padding: 30px;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+    animation: fadeInLetter 1s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: left;
+  }
+  
+  .love-letter-container h2 {
+    text-align: center;
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .love-letter-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  @keyframes fadeInLetter {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .secret-message-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffeaf4;
+  }
+  
+  .lock-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .heart-lock {
+    font-size: 3rem;
+    transition: transform 0.5s ease;
+  }
+  
+  .heart-lock.unlocked {
+    transform: rotate(20deg) scale(1.2);
+  }
+  
+  .hidden-message {
+    max-width: 600px;
+    margin-top: 20px;
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ff69b4;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
+    font-size: 1.1rem;
+    display: none;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .polaroid-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: #fffafc;
+  }
+  
+  .polaroid {
+    width: 180px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .polaroid:nth-child(2n) {
+    transform: rotate(3deg);
+  }
+  
+  .polaroid:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+  }
+  
+  .polaroid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  
+  .polaroid p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: block; /* Initially visible */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+    padding-top: 60px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Centering the modal content */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  #startYesBtn {
+    background-color: #e47aa3;
+    color: white;
+  }
+
+  #startNoBtn {
+    background-color: #ffffff;
+    color: #e47aa3;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+
+  #love-calculator {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff0f5;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 600px;
+  }
+
+  .love-calculator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    color: #ff1493;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  input {
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #ff1493;  /* Always visible border */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 80%;
+    margin-bottom: 20px;
+    color: #ff1493;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;  /* Remove default outline */
+  }
+
+  /* Border change when focused */
+  input:focus {
+    border-color: #ff66b2; /* Darker shade when focused */
+  }
+
+  input[readonly] {
+    background-color: #f1f1f1;
+    color: #ff1493;
+  }
+
+  button {
+    padding: 15px 30px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #ff66b2;
+  }
+
+  #love-percentage {
+    font-size: 2rem;
+    color: #ff1493;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+
+  .distance-section {
+    background: #ffb6c151;
+    color: black;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 600px;
+    width: 70%;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+  }
+  
+  .distance-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff1493;
+  }
+  
+  .distance-text {
+    font-size: 18px;
+    
+    color: black;
+  }
+  
+
+  .mood-meter {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f6cfdd;
+    color: black;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.2);
+  }
+  
+  .mood-meter h2 {
+    color: #ff6ec7;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .mood-meter select {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ff69b4;
+    background-color: #fff;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  #moodResult {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .rate-bf {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8d7e0;  /* Soft Pink */
+    color: #333;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.2);
+  }
+  
+  .rate-bf h2 {
+    color: #ff6ec7;  /* Bright Pink */
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .rate-bf p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #ratingSlider {
+    width: 80%;
+    height: 15px;
+    background: #ff6ec7;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  #ratingValue {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6ec7;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ff6ec7;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff69b4;
+  }
+  
+  #ratingResult {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  .love-memory-section {
+    background-color: #fff0f6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .ig-stack-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+  }
+  
+  .ig-stack {
+    width: 100%;
+    height: 260px; /* enough to hold stacked images */
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .ig-photo {
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo1 {
+    transform: rotate(-6deg);
+    z-index: 2;
+  }
+  
+  .photo2 {
+    transform: rotate(5deg);
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+  }
+  
+  .ig-message p {
+    margin-top: 180px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    color: #e91e63;
+    text-align: center;
+    white-space: pre-line;
+  }
+  

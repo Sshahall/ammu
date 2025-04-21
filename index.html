@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Love Story</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+  <!-- Customized alert box -->
+  <div id="startModal" class="modal">
+    <div class="modal-content">
+      <h2>Let's start?</h2>
+      <p>Click Yes to start the music and game!</p>
+      <button id="startYesBtn">Yes</button>
+      <button id="startNoBtn">No</button>
+    </div>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="romantic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1 data-aos="fade-down">Anakha, This One's Just for You</h1>
+  <p data-aos="fade-up">A little journey through our love story ❤️</p>
+</section>
+
+<!-- map -->
+<section class="distance-section">
+  <h2>💞 Distance Between Us</h2>
+  <p class="distance-text">
+    Shahal in Kannur 🧑‍💻 and Anakha in Thiruvananthapuram 👩‍❤️‍👨 — still just <strong>482 km</strong> apart. Love knows no distance! ❤️
+  </p>
+</section>
+
+
+
+<!-- love timer -->
+<section>
+  <h2 class="section-title" data-aos="fade-up">Countdown to Forever</h2>
+  <div class="countdown-container">
+    <p>We got committed on: <span id="commitment-date"></span></p>
+    <p>Days with you: <span id="days-countdown"></span></p>
+  </div>
+</section>
+
+<!-- Love Letter Section -->
+<section class="love-letter" data-aos="fade-up">
+  <div class="love-letter-container">
+    <h2>💌 A Little Love Letter</h2>
+    <p>
+      My dearest Anakha,<br><br>
+      Every day with you feels like a page from the most beautiful story ever written. 
+      Your smile, your words, your presence — they light up my world in ways I never thought possible. 
+      I'm so grateful for you and everything we share. I’ll keep loving you a little more every single day, forever and always. 💖
+      <br><br>
+      Yours truly,<br>
+      Shahal 🫶
+    </p>
+  </div>
+</section>
+
+
+<section class="love-memory-section">
+  <div class="ig-stack-container">
+    <div class="ig-stack">
+      <img src="images/chatscreenshot1.jpg" alt="Chat Screenshot 1" class="ig-photo photo1" />
+      <img src="images/chatscreenshot2.jpg" alt="Chat Screenshot 2" class="ig-photo photo2" />
+    </div>
+    <div class="ig-message">
+      <p id="typedText"></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Love Calculator Section -->
+<div id="love-calculator">
+  <div class="love-calculator-content">
+    <h2 class="section-title">Love Calculator</h2>
+    <form>
+      <label for="name1">Your Name</label><br>
+      <input id="name1" type="text" value="Shahal" readonly><br>
+      <label for="name2">Partner's Name</label><br>
+      <input id="name2" type="text" value="Anakha" readonly>
+      <button type="button" onclick="calculateLove()">Calculate Love</button>
+    </form>
+    <div id="love-percentage" style="display: none;">
+      <p>Your Love Compatibility: <span id="percentage"></span>%</p>
+    </div>
+  </div>
+</div>
+
+
+<section class="polaroid-wall">
+  <div class="polaroid">
+    <img src="images/gallery1.jpg" alt="Memory 1">
+    <p>sweeter than jilebi 😚</p>
+  </div>
+  <div class="polaroid">
+    <img src="images/gallery2.jpg" alt="Memory 2">
+    <p>Your eyes 💕</p>
+  </div>
+  <div class="polaroid">
+    <img src="images/gallery3.jpg" alt="Memory 3">
+    <p>You smiled like this 😍</p>
+  </div>
+  <!-- Add more polaroids as needed -->
+</section>
+
+
+<!-- Timeline Section -->
+<section>
+  <h2 class="section-title" data-aos="fade-up">Our Moments</h2>
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-right">
+      <h3>The Day We Met (18-04-2025)</h3>
+      <p>I'll never forget that moment. It changed everything ✨</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-left">
+      <h3>Late Night Talks</h3>
+      <p>Those endless chats, laughter, and random topics — they became the best part of my nights.🌎</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-right">
+      <h3>Forever Starts Here</h3>
+      <p>Every second with you feels like a fairytale.👩‍❤️‍💋‍👨</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-right">
+      <h3>Your Random Texts</h3>
+      <p>Just one “hi” from you would flip my whole mood. Every ping = instant happiness.❤️</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-left">
+      <h3>The Way You Say My Name</h3>
+      <p>Don’t know why, but hearing it from you hits my heart differently. Like music.💫</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-left">
+      <h3>The Day I Knew You Were the One</h3>
+      <p>I don’t remember the exact moment — but I remember the feeling. It was you. Always you🫵🏼</p>
+    </div>
+  </div>
+</section>
+
+<!-- rate bf -->
+<section class="rate-bf">
+  <h2>💖 Rate Your BF 💖</h2>
+  <p>How much do you love me? Slide to rate me! 💞</p>
+  
+  <!-- Slider for rating -->
+  <input type="range" id="ratingSlider" min="1" max="100" value="50" step="1">
+  <p>Rating: <span id="ratingValue">50</span></p>
+  
+  <!-- Submit Button -->
+  <button onclick="submitRating()">Submit Rating</button>
+  
+  <!-- Result -->
+  <div id="ratingResult"></div>
+</section>
+
+
+
+<!-- quick Question -->
+<section>
+  <h2 class="section-title" data-aos="fade-up">A Little Question</h2>
+  <div class="love-buttons" data-aos="zoom-in">
+    <button id="yesBtn">Yes ❤️</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+</section>
+
+
+<!-- Secret Message Section -->
+<section class="secret-message-section" data-aos="zoom-in">
+  <h2>🔐 A Secret Just for You</h2>
+  <div class="lock-container" onclick="revealMessage()">
+    <i class="heart-lock" id="heartLock">❤️</i>
+    <div class="hidden-message" id="secretMessage">
+      <p>Every beat of my heart whispers your name, Anakha. You're the secret I've always been waiting to find. 💌</p>
+    </div>
+  </div>
+</section>
+<audio id="popSound" src="pop.wav" preload="auto"></audio>
+
+
+<section class="mood-meter">
+  <h2>🩷 Mood Meter</h2>
+  <p>How are you feeling right now?</p>
+  <select id="moodSelect" onchange="updateMood()">
+    <option value="default">Select your mood</option>
+    <option value="happy">😊 Happy</option>
+    <option value="excited">😄 Excited</option>
+    <option value="missing">🥺 Missing You</option>
+    <option value="love">😍 Feeling Loved</option>
+    <option value="silly">😝 Silly</option>
+    <option value="grateful">🙏 Grateful</option>
+  </select>
+  <div id="moodResult"></div>
+</section>
+
+
+<!-- Carousel Section -->
+<section>
+  <h2 class="section-title" data-aos="fade-up">Thank you ammuseyyyy</h2>
+  <div class="swiper" style="margin-top: 50px;" data-aos="zoom-in">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/ammus3.jpg" alt="Love 1"></div>
+      <div class="swiper-slide"><img src="images/ammus4.jpg" alt="Love 2"></div>
+      <div class="swiper-slide"><img src="images/ammus4.jpg" alt="Love 3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Final Message -->
+<section>
+  <div class="final-message" data-aos="fade-up">
+    <p>Thank you for being in my life. This site is just a small piece of how much I love you. 💗</p>
+  </div>
+</section>
+
+<h2 id="typeText" style="color: #ff1493; text-align:center;"></h2>
+
+<!-- Scripts -->
+ 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
