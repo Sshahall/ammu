@@ -570,7 +570,7 @@ color: #ff1493;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0px;
     transition: transform 0.3s ease;
   }
   
@@ -582,7 +582,7 @@ color: #ff1493;
   .photo2 {
     transform: rotate(5deg);
     top: 30px;
-    left: 30px;
+    left: 120px;
     z-index: 1;
   }
   
@@ -593,5 +593,126 @@ color: #ff1493;
     color: #e91e63;
     text-align: center;
     white-space: pre-line;
+  }
+  
+
+  .quiz-section {
+    margin-bottom: 50px;
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .optionBtn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .optionBtn:hover {
+    background-color: #ff1493;
+  }
+  
+
+  .vault-container {
+    text-align: center;
+    margin: 40px auto;
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+  }
+  
+  .vault-container input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid pink;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  
+  .vault-container button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #secretMessage.hidden {
+    display: none;
+  }
+  
+  #secretMessage {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    color: #333;
+  }
+
+  .dice-roll-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f0f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-family: 'Arial', sans-serif;
+    color: #ff5a8f;
+    margin-bottom: 20px;
+  }
+  
+  .dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .roll-btn {
+    padding: 15px 25px;
+    background-color: #ff5a8f;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .roll-btn:hover {
+    background-color: #e34e76;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff5a8f;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
   }
   

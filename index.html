@@ -49,6 +49,7 @@
 
 
 
+
 <!-- love timer -->
 <section>
   <h2 class="section-title" data-aos="fade-up">Countdown to Forever</h2>
@@ -74,6 +75,18 @@
   </div>
 </section>
 
+<div class="quiz-section">
+  <h2>💕 Couple Quiz 💕</h2>
+  <div id="quiz">
+    <div class="question">
+      <p id="questionText" style="margin-top: 10px;">Loading question...</p>
+      <button onclick="checkAnswer('a')" class="optionBtn">A</button>
+      <button onclick="checkAnswer('b')" class="optionBtn">B</button>
+    </div>
+    <p id="result"></p>
+  </div>
+</div>
+
 
 <section class="love-memory-section">
   <div class="ig-stack-container">
@@ -88,6 +101,20 @@
 </section>
 
 
+<div class="vault-container">
+  <h2>🔒 Secret Vault</h2>
+  <input type="password" id="vaultPassword" placeholder="Enter the secret password" />
+  <button onclick="checkPassword()">Unlock</button>
+
+  <div id="secretMessage" class="hidden">
+    <h3>💌 My Love Note</h3>
+    <p>
+      Hey Anakha, this message is hidden from the world, only for you...  
+      I love you more than words can say. You're my peace, my chaos, my everything. 💖  
+      Forever yours, Shahal 🥺❤️and ninak message ayakknna oro momentum enik etavum priyappett aan , i love your presence around me , and Definitely am gonna miss you so much ammuseyyyyyy ,we should show everybody what's true love ,i promise ill be always with you
+    </p>
+  </div>
+</div>
 
 
 
@@ -99,9 +126,9 @@
     <h2 class="section-title">Love Calculator</h2>
     <form>
       <label for="name1">Your Name</label><br>
-      <input id="name1" type="text" value="Shahal" readonly><br>
+      <input id="name1" type="text" value="Shahal"><br>
       <label for="name2">Partner's Name</label><br>
-      <input id="name2" type="text" value="Anakha" readonly>
+      <input id="name2" type="text" value="Anakha">
       <button type="button" onclick="calculateLove()">Calculate Love</button>
     </form>
     <div id="love-percentage" style="display: none;">
@@ -109,6 +136,7 @@
     </div>
   </div>
 </div>
+
 
 
 <section class="polaroid-wall">
@@ -126,6 +154,16 @@
   </div>
   <!-- Add more polaroids as needed -->
 </section>
+
+<!-- dice roll -->
+<section class="dice-roll-section">
+  <h2>Roll the Dice for a Gift!</h2>
+  <div class="dice-container">
+    <button id="roll-button" class="roll-btn">Roll the Dice!</button>
+    <div id="dice-result" class="result">Your gift will appear here</div>
+  </div>
+</section>
+
 
 
 <!-- Timeline Section -->
@@ -180,6 +218,7 @@
 <!-- quick Question -->
 <section>
   <h2 class="section-title" data-aos="fade-up">A Little Question</h2>
+  <h3>Do you love me?</h3>
   <div class="love-buttons" data-aos="zoom-in">
     <button id="yesBtn">Yes ❤️</button>
     <button id="noBtn">No 😢</button>
