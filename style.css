@@ -206,46 +206,15 @@ color: #ff1493;
     to { opacity: 1; transform: translateY(0); }
   }
   
-  .secret-message-section {
-    text-align: center;
-    padding: 60px 20px;
-    background: #ffeaf4;
-  }
-  
-  .lock-container {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .heart-lock {
-    font-size: 3rem;
-    transition: transform 0.5s ease;
-  }
-  
-  .heart-lock.unlocked {
-    transform: rotate(20deg) scale(1.2);
-  }
-  
-  .hidden-message {
-    max-width: 600px;
-    margin-top: 20px;
-    background: #fff0f5;
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid #ff69b4;
-    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
-    font-size: 1.1rem;
-    display: none;
-    animation: fadeIn 1s ease forwards;
-  }
-  
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  
+
+  .pop-active {
+    transform: scale(1.3) rotate(10deg);
+    color: #e6005c;
+  }
   .polaroid-wall {
     display: flex;
     flex-wrap: wrap;
@@ -716,3 +685,141 @@ color: #ff1493;
     text-align: center;
   }
   
+
+  .heartbeat-countdown {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe4ec;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .heartbeat-title {
+    color: #ff4d88;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .heartbeat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heartbeat-icon {
+    font-size: 4rem;
+    animation: heartbeat 1s infinite;
+    color: #ff3366;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.15);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .heartbeat-days {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #ff6699;
+    font-weight: bold;
+  }
+  
+
+  .timeline-section {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #fff0f5;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+
+  .timeline-section h2 {
+    margin-bottom: 30px;
+    color: #e6005c;
+  }
+
+  .timeline {
+    position: relative;
+    margin: 0;
+    padding-left: 30px;
+    border-left: 3px solid #e6005c;
+  }
+
+  .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeInUp 0.6s ease both;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -11px; /* positions the dot exactly over the line */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #e6005c;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #fff0f5;
+  }
+  
+
+  .timeline-date {
+    font-weight: bold;
+    color: #ff3366;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .timeline-content {
+    text-align: left;
+    color: #333;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .timeline-section {
+      padding: 20px;
+    }
+
+    .timeline {
+      padding-left: 20px;
+    }
+
+    .timeline-content {
+      font-size: 15px;
+    }
+  }
+

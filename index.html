@@ -48,6 +48,15 @@
 </section>
 
 
+<section class="heartbeat-countdown">
+  <h2 class="heartbeat-title">⏳ Countdown to Our First Meet</h2>
+  <div class="heartbeat-wrapper">
+    <div class="heartbeat-icon">❤️</div>
+    <div class="heartbeat-days">
+      <span id="heartbeat-days-left"></span> days left
+    </div>
+  </div>
+</section>
 
 
 <!-- love timer -->
@@ -74,6 +83,32 @@
     </p>
   </div>
 </section>
+
+
+
+<section id="loveTimelineSection" class="timeline-section">
+  <h2>💫 Our Love Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Feb 2 2025</div>
+      <div class="timeline-content">"The day we first talked on Snapchat, it was something— just two messages exchanged, like a spark that didn't yet know it could turn into a fire. We were strangers, but something in that first conversation felt like the beginning of something more."✨</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 21 2025</div>
+      <div class="timeline-content">"The day you rejected me, I was lost in the vast emptiness of silence. No words escaped, no tears fell — only a hollow space where my heart once beat, frozen in the moment of your absence." 💞</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">April 18 2025</div>
+      <div class="timeline-content">"The best day of my life was when your love broke the silence between us. You spoke, and in those words, my soul stood still, caught between the longing and the joy of hearing you say, 'I love you.' In that moment, I was both flattered and frozen — as if the world itself bowed to the magic of your confession." 💖</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Today</div>
+      <div class="timeline-content">"Our journey is still unfolding, step by step, like a story yet to be written. Each day brings us closer, a quiet promise that no matter where the road leads, we walk it together, hand in hand." 🌍</div>
+    </div>
+  </div>
+</section>
+
+
 
 <div class="quiz-section">
   <h2>💕 Couple Quiz 💕</h2>
@@ -226,17 +261,19 @@
 </section>
 
 
-<!-- Secret Message Section -->
-<section class="secret-message-section" data-aos="zoom-in">
-  <h2>🔐 A Secret Just for You</h2>
-  <div class="lock-container" onclick="revealMessage()">
-    <i class="heart-lock" id="heartLock">❤️</i>
-    <div class="hidden-message" id="secretMessage">
+<section id="loveSurpriseSection" style="text-align: center; margin: 50px auto; padding: 30px; background-color: #fff0f5; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); width: 90%; max-width: 600px; font-family: 'Segoe UI', sans-serif;">
+  <h2>💖 A Love Surprise for You</h2>
+
+  <div id="loveLockContainer" style="cursor: pointer; margin-top: 20px;">
+    <div id="loveHeart" style="font-size: 60px; color: #ff3366; transition: transform 0.4s ease, color 0.3s ease;">❤️</div>
+
+    <div id="loveMessage" style="display: none; margin-top: 20px; font-size: 18px; color: #333; padding: 15px; border-radius: 12px; background-color: #fff; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05); animation: fadeIn 0.6s ease forwards;">
       <p>Every beat of my heart whispers your name, Anakha. You're the secret I've always been waiting to find. 💌</p>
     </div>
   </div>
+
+  <audio id="lovePopSound" src="pop.wav" preload="auto"></audio>
 </section>
-<audio id="popSound" src="pop.wav" preload="auto"></audio>
 
 
 <section class="mood-meter">

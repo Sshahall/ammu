@@ -110,54 +110,21 @@ function typeWriter() {
 }
 window.onload = typeWriter;
 
-function revealMessage() {
-  const lock = document.getElementById("heartLock");
-  const msg = document.getElementById("secretMessage");
-  const pop = document.getElementById("popSound");
-  lock.classList.add("unlocked");
-  msg.style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+  const heart = document.getElementById("loveHeart");
+  const message = document.getElementById("loveMessage");
+  const popSound = document.getElementById("lovePopSound");
 
-  pop.currentTime = 0; // Reset sound if played before
-  pop.play();
-}
+  document.getElementById("loveLockContainer").addEventListener("click", function () {
+    heart.classList.add("pop-active");
+    message.style.display = "block";
 
-//   detect the shake
-
-let lastX, lastY, lastZ;
-let moveThreshold = 15; // adjust sensitivity
-let lastTime = new Date();
-
-window.addEventListener(
-  "devicemotion",
-  function (e) {
-    const current = new Date();
-    const deltaTime = current - lastTime;
-    if (deltaTime < 500) return; // limit how often surprise shows
-
-    let acc = e.accelerationIncludingGravity;
-    if (!acc) return;
-
-    let { x, y, z } = acc;
-
-    if (lastX !== null) {
-      let deltaX = Math.abs(x - lastX);
-      let deltaY = Math.abs(y - lastY);
-      let deltaZ = Math.abs(z - lastZ);
-
-      if (deltaX + deltaY + deltaZ > moveThreshold) {
-        lastTime = new Date();
-        showSurprisePopup(); // show your cute surprise
-      }
-    }
-
-    lastX = x;
-    lastY = y;
-    lastZ = z;
-  },
-  true
-);
-
-// shake ends
+    popSound.currentTime = 0;
+    popSound.play().catch((err) => {
+      console.warn("Audio play failed:", err);
+    });
+  });
+});
 
 function showSurprisePopup() {
   Swal.fire({
@@ -440,3 +407,12 @@ document.getElementById("roll-button").addEventListener("click", function() {
 });
 
 
+function updateHeartbeatCountdown() {
+  const targetDate = new Date("2025-06-30");
+  const today = new Date();
+  const diff = targetDate - today;
+  const daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  document.getElementById('heartbeat-days-left').textContent = daysLeft;
+}
+
+updateHeartbeatCountdown();
