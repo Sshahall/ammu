@@ -102,12 +102,12 @@ color: #ff1493;
   }
 
 
-  .timeline {
+  .timeline-1 {
     max-width: 800px;
     margin: auto;
   }
 
-  .timeline-item {
+  .timeline-item-1 {
     background: #ffe6f0;
     margin: 20px 0;
     padding: 20px;
@@ -686,140 +686,165 @@ color: #ff1493;
   }
   
 
-  .heartbeat-countdown {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #ffe4ec;
-    border-radius: 20px;
-    margin: 40px auto;
-    max-width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  }
-  
-  .heartbeat-title {
-    color: #ff4d88;
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .heartbeat-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .heartbeat-icon {
-    font-size: 4rem;
-    animation: heartbeat 1s infinite;
-    color: #ff3366;
-  }
-  
-  @keyframes heartbeat {
-    0%, 100% {
-      transform: scale(1);
-    }
-    25% {
-      transform: scale(1.15);
-    }
-    50% {
-      transform: scale(0.95);
-    }
-    75% {
-      transform: scale(1.1);
-    }
-  }
-  
-  .heartbeat-days {
-    margin-top: 10px;
-    font-size: 1.4rem;
-    color: #ff6699;
-    font-weight: bold;
-  }
-  
+/* Heartbeat Section */
+.heartbeat-countdown {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffe4ec;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
 
+.heartbeat-title {
+  color: #ff4d88;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.heartbeat-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heartbeat-icon {
+  font-size: 4rem;
+  animation: heartbeat 1s infinite;
+  color: #ff3366;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+.heartbeat-days {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #ff6699;
+  font-weight: bold;
+}
+
+/* Timeline Section */
+.timeline-section {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  position: relative; /* Ensure the section stays in place */
+  z-index: 1; /* Ensure it's above other sections if needed */
+}
+
+.timeline-section h2 {
+  margin-bottom: 30px;
+  color: #e6005c;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 30px;
+  border-left: 3px solid #e6005c;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -11px; /* positions the dot exactly over the line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #e6005c;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff0f5;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #ff3366;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.timeline-content {
+  text-align: left;
+  color: #333;
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 600px) {
   .timeline-section {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 30px;
-    background: #fff0f5;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-  }
-
-  .timeline-section h2 {
-    margin-bottom: 30px;
-    color: #e6005c;
+    padding: 20px;
   }
 
   .timeline {
-    position: relative;
-    margin: 0;
-    padding-left: 30px;
-    border-left: 3px solid #e6005c;
-  }
-
-  .timeline-item {
-    margin-bottom: 30px;
-    position: relative;
-    animation: fadeInUp 0.6s ease both;
-  }
-
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -11px; /* positions the dot exactly over the line */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background-color: #e6005c;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px #fff0f5;
-  }
-  
-
-  .timeline-date {
-    font-weight: bold;
-    color: #ff3366;
-    margin-bottom: 5px;
-    text-align: left;
+    padding-left: 20px;
   }
 
   .timeline-content {
-    text-align: left;
-    color: #333;
-    padding: 10px 15px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    font-size: 15px;
   }
+}
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Ensure the heart-lock icon is clickable */
+.lock-container {
+  position: relative; /* Ensure it's positioned above other content */
+  z-index: 10; /* Bring it above any background or other content */
+}
 
-  @media (max-width: 600px) {
-    .timeline-section {
-      padding: 20px;
-    }
+.heart-lock {
+  position: relative;
+  z-index: 15; /* Ensure the icon is above the container */
+  cursor: pointer; /* Show pointer cursor to indicate it's clickable */
+}
 
-    .timeline {
-      padding-left: 20px;
-    }
-
-    .timeline-content {
-      font-size: 15px;
-    }
-  }
+/* Fix hidden message visibility */
+.hidden-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5; /* Ensure it's below the heart-lock */
+  display: none;
+}
 
